@@ -152,8 +152,12 @@ require '../connexion\connexion.php'
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-fw fa-sign-out"></i> Logout</a>
+                    <a class="nav-link" href="#"><i class="fa fa-fw fa-sign-out"></i> Logout </a>
                 </li>
+                <span class="time" style="color:white;">
+                    <?php $dt = new DateTime();
+                    echo $dt->format('d-m-Y H:i:s');?>
+               </span>
             </ul>
         </div>
     </nav>
@@ -161,7 +165,7 @@ require '../connexion\connexion.php'
     <div class="content-wrapper py-3">
 
         <div class="container-fluid">
-            <h1><?php echo $ligne_titre['titre_cv'].' '.$ligne_titre['accroche']; ?></h1>
+            <h1 style="text-align:justify; font-size:20px;"><?php echo $ligne_titre['titre_cv'].' '.$ligne_titre['accroche']; ?></h1>
 
             <!-- Breadcrumbs -->
             <ol class="breadcrumb">
